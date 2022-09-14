@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Sans", sans-serif;
+    background: linear-gradient(to top, #093028, #237a57);
+    background-repeat: no-repeat;
+}
+
+.music__player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background: linear-gradient(to top, #1d976c, #93f9b9);
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.4);
+}
+
+.song__poster {
+    width: 80%;
+    position: relative;
+    bottom: 40px;
+}
+
+.song__poster img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.song__title {
+    font-size: 2rem;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.song__artist {
+    font-size: 1.2rem;
+    opacity: 0.75;
+    text-align: center;
+}
+
+.time__indicator {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 0.5rem;
+}
+
+.time__indicator p {
+    font-size: 1.2rem;
+}
+
+.progress__bar {
+    cursor: pointer;
+    width: 90%;
+    height: 5px;
+    background-color: white;
+    border-radius: 2.5px;
+}
+
+.progress {
+    background-color: black;
+    height: 100%;
+    width: 0%;
+    border-radius: inherit;
+    opacity: 0.8;
+}
+
+.controller__btns {
+    display: flex;
+    margin: 2rem 0 0.5rem;
+}
+
+.controller__btns img {
+    margin: 0 0.5rem;
+}
+
+.prev,
+.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play__btn,
+.pause__btn {
+    width: 92px;
+    cursor: pointer;
+    transition-duration: 200ms;
+    outline: none;
+}
+
+.prev img,
+.next img {
+    width: 60px;
+    cursor: pointer;
+    transition-duration: 200ms;
+    outline: none;
+}
+
+.play__btn:active,
+.pause__btn:active,
+.prev img:active,
+.next img:active {
+    outline: none;
+    transform: scale(0.97);
+    filter: brightness(70%);
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .music__player {
+        width: 480px;
+    }
+    .song__title {
+        font-size: 2.75rem;
+    }
+    .song__artist {
+        font-size: 1.75rem;
+    }
+    .time__indicator p {
+        font-size: 1.5rem;
+    }
+    .play__btn,
+    .pause__btn {
+        width: 110px;
+    }
+    .prev img,
+    .next img {
+        width: 70px;
+    }
+}
+
+@media (min-width: 992px) {
+    .music__player {
+        width: 450px;
+        margin-top: 50px;
+    }
+    .song__poster {
+        width: 75%;
+    }
+    .song__title {
+        font-size: 2rem;
+    }
+    .song__artist {
+        font-size: 1.2rem;
+    }
+    .time__indicator p {
+        font-size: 1.2rem;
+    }
+    .play__btn,
+    .pause__btn {
+        width: 85px;
+    }
+    .prev img,
+    .next img {
+        width: 55px;
+    }
+    .controller__btns {
+        margin: 2rem 0 0.5rem;
+    }
+    .time__indicator {
+        margin: 0;
+    }
+    .progress__bar {
+        margin-top: 0.25rem;
+    }
+}

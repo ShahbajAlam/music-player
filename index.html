@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Music Player</title>
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+        <div class="music__player">
+            <!-- Poster -->
+            <div class="song__poster">
+                <img src="images/song-2.png" alt="" />
+            </div>
+
+            <!-- Title -->
+            <h1 class="song__title"></h1>
+
+            <!-- Artist -->
+            <h2 class="song__artist"></h2>
+
+            <!-- Audio Element -->
+            <audio src="" controls class="hidden"></audio>
+
+            <!-- Time Indicator -->
+            <div class="time__indicator">
+                <p class="current__time"></p>
+                <p class="duration"></p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress__bar">
+                <div class="progress"></div>
+            </div>
+
+            <!-- Controller Buttons -->
+            <div class="controller__btns">
+                <div class="prev">
+                    <img
+                        src="https://img.icons8.com/flat-round/64/000000/sort-left.png"
+                    />
+                </div>
+                <div class="play">
+                    <img
+                        class="pause__btn hidden"
+                        src="https://img.icons8.com/color/96/000000/circled-pause.png"
+                    />
+                    <img
+                        class="play__btn"
+                        src="https://img.icons8.com/color/96/000000/circled-play--v3.png"
+                    />
+                </div>
+                <div class="next">
+                    <img
+                        src="https://img.icons8.com/flat-round/64/000000/sort-right.png"
+                    />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
