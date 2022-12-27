@@ -5,6 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Music Player</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="style.css" />
         <script src="index.js" defer></script>
@@ -39,24 +46,14 @@
             <!-- Controller Buttons -->
             <div class="controller__btns">
                 <div class="prev">
-                    <img
-                        src="https://img.icons8.com/flat-round/64/000000/sort-left.png"
-                    />
+                    <i class="fa-sharp fa-solid fa-circle-chevron-left"></i>
                 </div>
                 <div class="play">
-                    <img
-                        class="pause__btn hidden"
-                        src="https://img.icons8.com/color/96/000000/circled-pause.png"
-                    />
-                    <img
-                        class="play__btn"
-                        src="https://img.icons8.com/color/96/000000/circled-play--v3.png"
-                    />
+                    <i class="fa-solid fa-circle-pause pause__btn hidden"></i>
+                    <i class="fa-solid fa-circle-play play__btn"></i>
                 </div>
                 <div class="next">
-                    <img
-                        src="https://img.icons8.com/flat-round/64/000000/sort-right.png"
-                    />
+                    <i class="fa-sharp fa-solid fa-circle-chevron-right"></i>
                 </div>
             </div>
         </div>
