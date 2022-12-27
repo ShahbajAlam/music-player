@@ -35,8 +35,9 @@ body {
 
 .song__poster img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1;
     object-fit: cover;
+    object-position: top;
     border-radius: 15px;
 }
 
@@ -84,7 +85,7 @@ body {
     margin: 2rem 0 0.5rem;
 }
 
-.controller__btns img {
+.controller__btns i {
     margin: 0 0.5rem;
 }
 
@@ -97,15 +98,15 @@ body {
 
 .play__btn,
 .pause__btn {
-    width: 92px;
+    font-size: 80px;
     cursor: pointer;
     transition-duration: 200ms;
     outline: none;
 }
 
-.prev img,
-.next img {
-    width: 60px;
+.prev i,
+.next i {
+    font-size: 55px;
     cursor: pointer;
     transition-duration: 200ms;
     outline: none;
@@ -113,8 +114,8 @@ body {
 
 .play__btn:active,
 .pause__btn:active,
-.prev img:active,
-.next img:active {
+.prev i:active,
+.next i:active {
     outline: none;
     transform: scale(0.97);
     filter: brightness(70%);
@@ -137,13 +138,16 @@ body {
     .time__indicator p {
         font-size: 1.5rem;
     }
+    .controller__btns i {
+        margin: 0 0.6rem;
+    }
     .play__btn,
     .pause__btn {
-        width: 110px;
+        font-size: 100px;
     }
-    .prev img,
-    .next img {
-        width: 70px;
+    .prev i,
+    .next i {
+        font-size: 70px;
     }
 }
 
@@ -166,14 +170,17 @@ body {
     }
     .play__btn,
     .pause__btn {
-        width: 85px;
+        font-size: 70px;
     }
-    .prev img,
-    .next img {
-        width: 55px;
+    .prev i,
+    .next i {
+        font-size: 45px;
     }
     .controller__btns {
         margin: 2rem 0 0.5rem;
+    }
+    .controller__btns i {
+        margin: 0 0.75rem;
     }
     .time__indicator {
         margin: 0;
