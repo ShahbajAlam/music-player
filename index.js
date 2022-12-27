@@ -3,34 +3,35 @@
 const songs = [
     {
         name: "Srivalli",
-        source: "songs/song-1.mp3",
-        poster: "images/song-1.png",
+        source: "songs/srivalli.mp3",
+        poster: "images/srivalli.png",
         artist: "Sid Sriram",
     },
     {
-        name: "Saami Saami",
-        source: "songs/song-2.mp3",
-        poster: "images/song-2.png",
-        artist: "Mounika Yadav",
+        name: "Vachindamma",
+        source: "songs/vachindamma.mp3",
+        poster: "images/vachindamma.jpg",
+        artist: "Sid Sriram",
     },
     {
-        name: "Dakko Dakko Meka",
-        source: "songs/song-3.mp3",
-        poster: "images/song-3.png",
-        artist: "Shivam",
+        name: "Nee Kannu Neeli Samudram",
+        source: "songs/Nee Kannu Neeli Samudram.mp3",
+        poster: "images/Nee Kannu Neeli Samudram.jpg",
+        artist: "Javed Ali",
     },
     {
-        name: "Ey Bidda Idhi Naa Adda",
-        source: "songs/song-4.mp3",
-        poster: "images/song-4.png",
-        artist: "Nakash Aziz",
+        name: "Sara Sara Saara Kathu",
+        source: "songs/Sara Sara Saara Kathu.mp3",
+        poster: "images/sara sara saara kathu.jpg",
+        artist: "Chinmayi Sripada",
     },
 ];
 
+const player = document.querySelector(".music__player");
 const playBtn = document.querySelector(".play__btn");
 const pauseBtn = document.querySelector(".pause__btn");
-const prevBtn = document.querySelector(".prev img");
-const nextBtn = document.querySelector(".next img");
+const prevBtn = document.querySelector(".prev i");
+const nextBtn = document.querySelector(".next i");
 const audio = document.querySelector("audio");
 const poster = document.querySelector(".song__poster img");
 const title = document.querySelector(".song__title");
@@ -41,6 +42,7 @@ const progressBar = document.querySelector(".progress__bar");
 const progress = document.querySelector(".progress");
 let currentSongIndex = 0;
 let currentTimeMinute, currentTimeSecond, durationMinute, durationSecond;
+
 const initialSong = () => {
     audio.src = songs[currentSongIndex].source;
     title.textContent = songs[currentSongIndex].name;
@@ -49,6 +51,7 @@ const initialSong = () => {
 };
 
 initialSong();
+audio.volume = 0.6;
 
 const playSong = () => {
     audio.play();
@@ -63,10 +66,7 @@ const pauseSong = () => {
 };
 
 const loadSong = () => {
-    audio.src = songs[currentSongIndex].source;
-    title.textContent = songs[currentSongIndex].name;
-    poster.src = songs[currentSongIndex].poster;
-    artist.textContent = songs[currentSongIndex].artist;
+    initialSong();
     playSong();
 };
 
@@ -123,6 +123,7 @@ progressBar.addEventListener("click", function (e) {
 
 audio.addEventListener("ended", () => {
     currentSongIndex++;
+    if (currentSongIndex > songs.length - 1) currentSongIndex = 0;
     loadSong();
 });
 
